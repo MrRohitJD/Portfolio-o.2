@@ -49,9 +49,9 @@ export default function Contact() {
       <div className="container mx-auto px-6 max-w-5xl">
         {/* Intro */}
         <div className="mb-12">
-          <h2 className="section-title">Let's Work Together</h2>
+          <h2 className="section-title">Let&apos;s Work Together</h2>
           <p className="text-lg text-gray-text max-w-3xl">
-            If you're looking for a motivated candidate with skills in data science, Python, and problem-solving, I'd be glad to connect.
+            If you&apos;re looking for a motivated candidate with skills in data science, Python, and problem-solving, I&apos;d be glad to connect.
           </p>
         </div>
 
