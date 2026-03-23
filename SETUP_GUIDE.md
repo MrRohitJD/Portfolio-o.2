@@ -18,7 +18,7 @@ Open your terminal in the project directory and run:
 
 ```bash
 npm install
-```
+```  
 
 This will install all required packages:
 - Next.js
