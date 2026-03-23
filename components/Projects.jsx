@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Star, Clock, Folder } from 'lucide-react'
+import { Star, Clock, Folder, Github } from 'lucide-react'
 
 const projectsData = {
   featured: [
@@ -15,13 +15,22 @@ const projectsData = {
       title: 'Universal Knowledge Agent (RAG)',
       description: 'Universal Knowledge Agent is a RAG-powered engine using Gemini 2.5 Flash and ChromaDB. It transforms .txt and .md files into interactive bots with source attribution and zero hallucinations. Features include web scraping, smart chunking, and a sleek Streamlit UI.',
       tags: ['RAG'],
-      tagType: 'rag'
+      tagType: 'rag',
+      githubUrl: 'https://github.com/MrRohitJD/Universal-Knowledge-Agent'
     },
     {
       title: 'Placement Cell Web App',
       description: 'Developed a web-based system to bridge the gap between students and recruiters, featuring role-based access for admins and applicants to manage the end-to-end placement cycle.',
       tags: ['Django'],
-      tagType: 'django'
+      tagType: 'django',
+      githubUrl: 'https://github.com/MrRohitJD/Placement--Cell'
+    },
+    {
+      title: 'VideoFrame - Videos Search Timestamp Toolkit',
+      description: 'A toolkit to search videos and return relevant timestamped moments, helping users jump directly to useful sections instead of watching full recordings.',
+      tags: ['RAG'],
+      tagType: 'rag',
+      githubUrl: 'https://github.com/MrRohitJD/VideoFrame---Videos-Search-Timestamp-Toolkit'
     },
   ],
   past: [
@@ -101,6 +110,18 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-200 hover:text-white"
+                >
+                  <Github className="w-4 h-4" />
+                  GitHub Repo
+                </a>
+              )}
             </div>
           ))}
         </div>
