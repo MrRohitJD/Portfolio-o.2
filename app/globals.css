@@ -12,6 +12,13 @@
   }
 }
 
+/* Keep desktop at a permanent 80% visual zoom without affecting mobile layouts. */
+@media (min-width: 1024px) {
+  html {
+    zoom: 80%;
+  }
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center gap-2.5 px-6 py-3 rounded-lg text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.28),0_10px_24px_rgba(255,255,255,0.08)];
