@@ -1,19 +1,32 @@
 'use client'
 
 import { useState } from 'react'
-import { Code2, Shield, Languages } from 'lucide-react'
+import {
+  Code2,
+  Shield,
+  Languages,
+  NotebookText,
+  Briefcase,
+  Laptop,
+  Table2,
+  ChartColumn,
+  Braces,
+  Blocks,
+  Webhook,
+  Database,
+} from 'lucide-react'
 
 const skillsData = {
   software: [
-    { icon: '💼', name: 'Data science' },
-    { icon: '📊', name: 'Data analyst' },
-    { icon: '🤖', name: 'Scikit-learn' },
-    { icon: '🐼', name: 'Pandas' },
-    { icon: '📈', name: 'Matplotlib' },
-    { icon: '🐍', name: 'Python' },
-    { name: 'Django Framework' },
-    { name: 'REST API / Fast API' },
-    { name: 'SQL' },
+    { icon: NotebookText, name: 'Data science' },
+    { icon: Briefcase, name: 'Data analyst' },
+    { icon: Laptop, name: 'Scikit-learn' },
+    { icon: Table2, name: 'Pandas' },
+    { icon: ChartColumn, name: 'Matplotlib' },
+    { icon: Braces, name: 'Python' },
+    { icon: Blocks, name: 'Django Framework' },
+    { icon: Webhook, name: 'REST API / Fast API' },
+    { icon: Database, name: 'SQL' },
   ],
   expertise: [
     { name: 'Machine Learning' },
@@ -36,7 +49,7 @@ export default function Skills() {
 
   return (
     <section className="py-20">
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto px-6 max-w-5xl">
         <h2 className="section-title">Skills</h2>
 
         {/* Tabs */}
@@ -65,16 +78,16 @@ export default function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {skillsData[activeTab].map((skill, index) => (
             <div
               key={index}
-              className="card p-5 flex items-center gap-3"
+              className="card min-h-[56px] px-4 py-3 flex items-center gap-2.5"
             >
               {skill.icon && (
-                <span className="text-xl flex-shrink-0">{skill.icon}</span>
+                <skill.icon className="w-4 h-4 flex-shrink-0 text-gray-text" />
               )}
-              <span className="text-gray-light text-base font-medium">
+              <span className="text-gray-light text-sm md:text-[15px] font-semibold leading-tight">
                 {skill.name}
               </span>
             </div>

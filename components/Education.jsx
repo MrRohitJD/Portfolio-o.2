@@ -22,7 +22,7 @@ const educationData = [
 export default function Education() {
   return (
     <section className="py-20">
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto px-6 max-w-5xl">
         <h2 className="section-title">Education</h2>
 
         {/* Timeline Tab */}

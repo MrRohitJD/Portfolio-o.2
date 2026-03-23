@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <section className="py-20 pb-32">
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto px-6 max-w-5xl">
         {/* Intro */}
         <div className="mb-12">
           <h2 className="section-title">Let's Work Together</h2>
