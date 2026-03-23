@@ -11,8 +11,8 @@ const educationData = [
     date: 'June 1, 2027',
   },
   {
-    title: 'Bachelor of Computer Applications',
-    institution: '- Rani Channamma University',
+    title: 'Bachelor of Computer Applications (computer applications)',
+    institution: '- Rani Channamma university',
     status: 'done',
     statusText: 'Done',
     date: 'September 12, 2024',

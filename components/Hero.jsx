@@ -43,6 +43,12 @@ export default function Hero() {
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
+              <a
+                href="#"
+                className="btn btn-secondary text-gray-100"
+              >
+                Resume
+              </a>
             </div>
           </div>
 
