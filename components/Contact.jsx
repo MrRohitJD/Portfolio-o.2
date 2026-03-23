@@ -20,13 +20,32 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I will get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+
+    const form = e.currentTarget
+    const formDataToSubmit = new FormData(form)
+
+    fetch('https://formspree.io/f/mgonjkob', {
+      method: 'POST',
+      body: formDataToSubmit,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Form submission failed')
+        }
+
+        setFormData({ name: '', email: '', message: '' })
+        window.location.href = 'https://portfolio-rohitjd.vercel.app/thankYou.html'
+      })
+      .catch(() => {
+        alert('Unable to submit the form right now. Please try again.')
+      })
   }
 
   return (
-    <section className="py-20 pb-32">
+    <section id="contact" className="py-20 pb-32">
       <div className="container mx-auto px-6 max-w-5xl">
         {/* Intro */}
         <div className="mb-12">
@@ -40,7 +59,12 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold text-white text-center mb-8">Contact Us</h3>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            action="https://formspree.io/f/mgonjkob"
+            method="POST"
+            className="space-y-6"
+          >
             {/* Name Field */}
             <div className="space-y-2">
               <label htmlFor="name" className="block text-base text-gray-light font-medium">

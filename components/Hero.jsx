@@ -26,7 +26,7 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/MrRohitJD"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
@@ -35,7 +35,7 @@ export default function Hero() {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/rohitjd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-linkedin"
@@ -44,7 +44,9 @@ export default function Hero() {
                 LinkedIn
               </a>
               <a
-                href="#"
+                href="https://drive.google.com/file/d/1G_WMebwxJ1W23Qr1cy73zKmOYgVVESEv/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-secondary text-gray-100"
               >
                 Resume

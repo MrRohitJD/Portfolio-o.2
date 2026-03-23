@@ -76,7 +76,7 @@ export default function Projects() {
               {/* Header */}
               <div className="flex items-start gap-2.5 mb-3">
                 <Folder className="w-5 h-5 text-gray-200 flex-shrink-0 mt-0.5" strokeWidth={2.4} />
-                <h3 className="text-xl md:text-2xl font-semibold text-white leading-snug tracking-tight">
+                <h3 className="text-lg md:text-xl font-semibold text-white leading-snug tracking-tight">
                   {project.title}
                 </h3>
               </div>

@@ -44,14 +44,6 @@ export default function Education() {
       <div className="container mx-auto px-6 max-w-5xl">
         <h2 className="section-title">Education</h2>
 
-        {/* Timeline Tab */}
-        <div className="flex flex-wrap gap-3 mb-8">
-          <button className="tab-btn active">
-            <Clock className="w-4 h-4" />
-            Timeline view
-          </button>
-        </div>
-
         {/* Education Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {educationData.map((item, index) => (
