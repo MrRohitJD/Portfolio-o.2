@@ -5,14 +5,14 @@ import { Github, Linkedin } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center py-16 md:py-20">
+    <section className="py-12 md:py-14">
       <div className="container mx-auto px-6 max-w-5xl">
-        <h1 className="text-4xl font-bold text-white mb-10">Portfolio</h1>
+        <h1 className="text-4xl font-bold text-white mt-[85px] md:mt-[93px] mb-8">Portfolio</h1>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight sm:whitespace-nowrap">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight sm:whitespace-nowrap">
               Hello, I'm ROHIT JADHAV.
             </h2>
 
