@@ -9,7 +9,8 @@ const projectsData = {
       title: '(SpeakFrame) Audio & Embeddings Toolkit (RAG base)',
       description: 'A collection of Python scripts to transcribe audio, create and store text embeddings, and retrieve matching text chunks for use with large language models. It supports local audio processing, embedding generation, and semantic search workflows.',
       tags: ['RAG'],
-      tagType: 'rag'
+      tagType: 'rag',
+      githubUrl: 'https://github.com/MrRohitJD/VideoFrame---Videos-Search-Timestamp-Toolkit'
     },
     {
       title: 'Universal Knowledge Agent (RAG)',
@@ -24,13 +25,6 @@ const projectsData = {
       tags: ['Django'],
       tagType: 'django',
       githubUrl: 'https://github.com/MrRohitJD/Placement--Cell'
-    },
-    {
-      title: 'VideoFrame - Videos Search Timestamp Toolkit',
-      description: 'A toolkit to search videos and return relevant timestamped moments, helping users jump directly to useful sections instead of watching full recordings.',
-      tags: ['RAG'],
-      tagType: 'rag',
-      githubUrl: 'https://github.com/MrRohitJD/VideoFrame---Videos-Search-Timestamp-Toolkit'
     },
   ],
   past: [
