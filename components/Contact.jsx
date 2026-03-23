@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowRight, Star } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -37,8 +37,8 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="max-w-3xl">
-          <h3 className="text-2xl font-bold text-white mb-8">Contact Us</h3>
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-2xl font-bold text-white text-center mb-8">Contact Us</h3>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name Field */}
@@ -54,7 +54,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Name"
                 required
-                className="w-full bg-dark-light border border-dark-border rounded-lg px-4 py-3 text-gray-light placeholder-gray-600 focus:outline-none focus:border-purple-600 focus:bg-dark-lighter transition-colors"
+                className="w-full bg-dark-light border border-dark-border rounded-lg px-4 py-3 text-gray-light placeholder-gray-600 focus:outline-none focus:border-white focus:bg-dark-lighter transition-colors"
               />
             </div>
 
@@ -71,7 +71,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Email"
                 required
-                className="w-full bg-dark-light border border-dark-border rounded-lg px-4 py-3 text-gray-light placeholder-gray-600 focus:outline-none focus:border-purple-600 focus:bg-dark-lighter transition-colors"
+                className="w-full bg-dark-light border border-dark-border rounded-lg px-4 py-3 text-gray-light placeholder-gray-600 focus:outline-none focus:border-white focus:bg-dark-lighter transition-colors"
               />
             </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
                 onChange={handleChange}
                 rows={6}
                 required
-                className="w-full bg-dark-light border border-dark-border rounded-lg px-4 py-3 text-gray-light placeholder-gray-600 focus:outline-none focus:border-purple-600 focus:bg-dark-lighter transition-colors resize-y min-h-[120px]"
+                className="w-full bg-dark-light border border-dark-border rounded-lg px-4 py-3 text-gray-light placeholder-gray-600 focus:outline-none focus:border-white focus:bg-dark-lighter transition-colors resize-y min-h-[120px]"
               />
             </div>
 
@@ -100,16 +100,6 @@ export default function Contact() {
                 Submit
                 <ArrowRight className="w-4 h-4" />
               </button>
-
-              <a
-                href="https://tally.so"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                Made with Tally
-                <Star className="w-4 h-4" />
-              </a>
             </div>
           </form>
         </div>
