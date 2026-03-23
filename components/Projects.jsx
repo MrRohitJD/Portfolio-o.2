@@ -36,6 +36,10 @@ const projectsData = {
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('featured')
+  const tabItems = [
+    { key: 'featured', label: 'Featured', icon: Star },
+    { key: 'past', label: 'Past Projects', icon: Clock },
+  ]
 
   return (
     <section className="py-20">
@@ -43,37 +47,42 @@ export default function Projects() {
         <h2 className="section-title">Projects</h2>
 
         {/* Tabs */}
-        <div className="flex flex-wrap gap-3 mb-8">
-          <button
-            onClick={() => setActiveTab('featured')}
-            className={`tab-btn ${activeTab === 'featured' ? 'active' : ''}`}
-          >
-            <Star className="w-4 h-4" />
-            Featured
-          </button>
-          <button
-            onClick={() => setActiveTab('past')}
-            className={`tab-btn ${activeTab === 'past' ? 'active' : ''}`}
-          >
-            <Clock className="w-4 h-4" />
-            Past Projects
-          </button>
+        <div className="flex flex-wrap gap-2 mb-8">
+          {tabItems.map((tab) => {
+            const Icon = tab.icon
+            const isActive = activeTab === tab.key
+
+            return (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 font-bold leading-none transition-all duration-500 ease-out ${
+                  isActive
+                    ? 'bg-dark-lighter text-white border border-dark-border shadow-[inset_0_0_0_1px_rgba(255,255,255,0.04)]'
+                    : 'text-gray-text border border-transparent hover:text-gray-light'
+                }`}
+              >
+                <Icon className="w-[18px] h-[18px]" strokeWidth={2.5} />
+                <span className="text-base font-extrabold tracking-tight">{tab.label}</span>
+              </button>
+            )
+          })}
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div key={activeTab} className="animate-skills-tab-in grid grid-cols-1 md:grid-cols-2 gap-4">
           {projectsData[activeTab].map((project, index) => (
-            <div key={index} className="card p-6">
+            <div key={index} className="rounded-2xl border border-dark-border bg-gradient-to-br from-[#232427] to-[#1d1e22] p-5">
               {/* Header */}
-              <div className="flex items-start gap-3 mb-4">
-                <Folder className="w-6 h-6 text-gray-text flex-shrink-0 mt-0.5" />
-                <h3 className="text-lg font-semibold text-white leading-snug">
+              <div className="flex items-start gap-2.5 mb-3">
+                <Folder className="w-5 h-5 text-gray-200 flex-shrink-0 mt-0.5" strokeWidth={2.4} />
+                <h3 className="text-xl md:text-2xl font-extrabold text-white leading-snug tracking-tight">
                   {project.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="text-gray-text text-base leading-relaxed mb-4">
+              <p className="text-gray-light text-base leading-relaxed mb-4">
                 {project.description}
               </p>
 
@@ -82,7 +91,11 @@ export default function Projects() {
                 {project.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
-                    className={`tag tag-${project.tagType}`}
+                    className={`inline-flex items-center rounded-md px-2.5 py-1 text-sm font-bold leading-none ${
+                      project.tagType === 'django'
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-red-500 text-white'
+                    }`}
                   >
                     {tag}
                   </span>
