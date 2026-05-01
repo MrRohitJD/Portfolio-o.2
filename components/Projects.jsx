@@ -19,6 +19,13 @@ const projectsData = {
       tagType: 'rag',
       githubUrl: 'https://github.com/MrRohitJD/Universal-Knowledge-Agent'
     },
+      {
+      title: 'ML Credit score',
+      description: 'Built an end-to-end Credit Risk Prediction Web App using Kaggle’s dataset, achieving 86.41 ROC-AUC (close to top leaderboard score of 86.64).Trained models (Logistic Regression, XGBoost, Balanced Random Forest) with strong preprocessing and class imbalance handling. Developed a Django-based app with real-time predictions, dashboard insights, and SQLite integration for a complete ML deployment.',
+      tags: ['Scikit-learn', 'XGBoost', 'Optuna',  'imbalanced-learn'],
+      tagType: 'ML pipeline',
+      githubUrl: 'https://github.com/MrRohitJD/CreditScore-ML-project'
+    },
     {
       title: 'Placement Cell Web App',
       description: 'Developed a web-based system to bridge the gap between students and recruiters, featuring role-based access for admins and applicants to manage the end-to-end placement cycle.',
@@ -26,13 +33,7 @@ const projectsData = {
       tagType: 'django',
       githubUrl: 'https://github.com/MrRohitJD/Placement--Cell'
     },
-    {
-      title: 'ML Credit score',
-      description: 'Built an end-to-end Credit Risk Prediction Web App using Kaggle’s dataset, achieving 86.41 ROC-AUC (close to top leaderboard score of 86.64).Trained models (Logistic Regression, XGBoost, Balanced Random Forest) with strong preprocessing and class imbalance handling. Developed a Django-based app with real-time predictions, dashboard insights, and SQLite integration for a complete ML deployment.',
-      tags: ['Scikit-learn', 'XGBoost', 'Optuna',  'imbalanced-learn'],
-      tagType: 'ML pipeline',
-      githubUrl: 'https://github.com/MrRohitJD/CreditScore-ML-project'
-    },
+  ,
   ],
   past: [
     {
