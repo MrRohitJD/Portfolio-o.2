@@ -29,7 +29,7 @@ const projectsData = {
     {
       title: 'ML Credit score',
       description: 'Built an end-to-end Credit Risk Prediction Web App using Kaggle’s dataset, achieving 86.41 ROC-AUC (close to top leaderboard score of 86.64).Trained models (Logistic Regression, XGBoost, Balanced Random Forest) with strong preprocessing and class imbalance handling. Developed a Django-based app with real-time predictions, dashboard insights, and SQLite integration for a complete ML deployment.',
-      tags: ['Python', 'Django', 'Scikit-learn', 'XGBoost', 'Optuna',  'imbalanced-learn'],
+      tags: ['Scikit-learn', 'XGBoost', 'Optuna',  'imbalanced-learn'],
       tagType: 'ML pipeline',
       githubUrl: 'https://github.com/MrRohitJD/CreditScore-ML-project'
     },
@@ -38,7 +38,7 @@ const projectsData = {
     {
       title: 'Smart Learning Gap Detection System',
       description: 'AI-powered EdTech solution addressing the Silent Academic Dropout Crisis by tracking student understanding and detecting learning gaps in real time. It dynamically adapts learning paths to strengthen weak concepts and prevent long-term academic failure. Built to deliver personalised, accessible education for every learner.',
-      tags: ['ML' , 'Python','Scikit-learn'],
+      tags: ['ML', 'Scikit-learn'],
       tagType: 'ML pipeline',
       githubUrl: 'https://github.com/MrRohitJD/Only-AI'
     },
