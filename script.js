@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe cards for animation
-    const cards = document.querySelectorAll('.skill-card, .project-card, .education-card');
+    const cards = document.querySelectorAll('.skill-card, .project-card, .education-card, .experience-card, .certification-card, .achievement-card');
     cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';

@@ -8,7 +8,7 @@ const educationData = [
     institution: '- Ajeenkya D. Y. Patil university',
     status: 'progress',
     statusText: 'In progress',
-    date: 'June 1, 2027',
+    date: 'April 2027',
   },
   {
     title: 'Bachelor of Computer Applications (computer applications)',
