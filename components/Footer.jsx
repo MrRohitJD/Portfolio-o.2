@@ -26,7 +26,7 @@ const footerLinks = [
   },
   {
     name: 'Kaggle',
-    href: 'https://www.kaggle.com/',
+    href: 'https://www.kaggle.com/rohitjd01',
     icon: SiKaggle,
   },
 ]
