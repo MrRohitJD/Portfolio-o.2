@@ -37,7 +37,7 @@ export default function Contact() {
         }
 
         setFormData({ name: '', email: '', message: '' })
-        window.location.href = 'https://portfolio-rohitjd.vercel.app/thankYou.html'
+        window.location.href = '/thankYou.html'
       })
       .catch(() => {
         alert('Unable to submit the form right now. Please try again.')
@@ -57,7 +57,7 @@ export default function Contact() {
 
         {/* Contact Form */}
         <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Contact Us</h3>
+          <h3 className="text-2xl font-bold text-white text-center mb-8">Contact Me</h3>
 
           <form
             onSubmit={handleSubmit}
