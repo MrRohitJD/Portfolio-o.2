@@ -14,7 +14,7 @@ const certifications = [
 ]
 
 const achievements = [
-  'Solved 90+ Data Structures and Algorithms problems on LeetCode',
+  'Solved 100+ Data Structures and Algorithms problems on LeetCode',
 ]
 
 export default function CertificationsAchievements() {

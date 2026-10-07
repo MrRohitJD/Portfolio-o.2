@@ -6,6 +6,18 @@ import { Star, Clock, Folder, Github } from 'lucide-react'
 const projectsData = {
   featured: [
     {
+      title: 'AI-Powered CCTV Surveillance & Intrusion Detection',
+      description: 'Real-time AI surveillance system for person and vehicle detection, multi-object tracking, and intrusion-zone monitoring. Built scalable FastAPI services with YOLO, ByteTrack, and Re-ID for consistent object tracking and PostgreSQL for detection data management.',
+      tags: ['YOLO', 'ByteTrack', 'Re-ID', 'FastAPI', 'Python', 'PostgreSQL', 'OpenCV', 'Computer Vision'],
+      tagType: 'computer-vision',
+    },
+    {
+      title: 'AI-Powered Gmail Assistant & Email Automation',
+      description: 'Full-stack AI Gmail assistant that connects to Gmail through Google OAuth and the Gmail API. Enables users to retrieve, classify, search, and manage emails through an AI chatbot, including composing and sending emails to specific recipients using natural-language commands.',
+      tags: ['React', 'FastAPI', 'Python', 'Gmail API', 'Google OAuth', 'PostgreSQL', 'NLP', 'AI Agents', 'Generative AI'],
+      tagType: 'ai-agent',
+    },
+    {
       title: '(SpeakFrame) Audio & Embeddings Toolkit (RAG base)',
       description: 'A collection of Python scripts to transcribe audio, create and store text embeddings, and retrieve matching text chunks for use with large language models. It supports local audio processing, embedding generation, and semantic search workflows.',
       tags: ['RAG'],
@@ -13,35 +25,46 @@ const projectsData = {
       githubUrl: 'https://github.com/MrRohitJD/VideoFrame---Videos-Search-Timestamp-Toolkit'
     },
     {
-      title: 'Universal Knowledge Agent (RAG)',
+      title: 'Universal RAG System',
       description: 'Universal Knowledge Agent is a RAG-powered engine using Gemini 2.5 Flash and ChromaDB. It transforms .txt and .md files into interactive bots with source attribution and zero hallucinations. Features include web scraping, smart chunking, and a sleek Streamlit UI.',
       tags: ['RAG'],
       tagType: 'rag',
       githubUrl: 'https://github.com/MrRohitJD/Universal-Knowledge-Agent'
     },
-      {
-      title: 'ML Credit score',
+  ],
+  past: [
+    {
+      title: 'ML Credit Score',
       description: 'Built an end-to-end Credit Risk Prediction Web App using Kaggle’s dataset, achieving 86.41 ROC-AUC (close to top leaderboard score of 86.64).Trained models (Logistic Regression, XGBoost, Balanced Random Forest) with strong preprocessing and class imbalance handling. Developed a Django-based app with real-time predictions, dashboard insights, and SQLite integration for a complete ML deployment.',
       tags: ['Scikit-learn', 'XGBoost', 'Optuna',  'imbalanced-learn'],
       tagType: 'ML pipeline',
       githubUrl: 'https://github.com/MrRohitJD/CreditScore-ML-project'
     },
     {
-      title: 'Placement Cell Web App',
+      title: 'Placement Cell Web Application',
       description: 'Developed a web-based system to bridge the gap between students and recruiters, featuring role-based access for admins and applicants to manage the end-to-end placement cycle.',
       tags: ['Django'],
       tagType: 'django',
       githubUrl: 'https://github.com/MrRohitJD/Placement--Cell'
     },
-  ,
-  ],
-  past: [
     {
       title: 'Smart Learning Gap Detection System',
       description: 'AI-powered EdTech solution addressing the Silent Academic Dropout Crisis by tracking student understanding and detecting learning gaps in real time. It dynamically adapts learning paths to strengthen weak concepts and prevent long-term academic failure. Built to deliver personalised, accessible education for every learner.',
       tags: ['ML', 'Scikit-learn'],
       tagType: 'ML pipeline',
       githubUrl: 'https://github.com/MrRohitJD/Only-AI'
+    },
+    {
+      title: 'Stock Market Management System',
+      description: 'Full-stack stock market web application built with Spring Boot and Thymeleaf for managing and displaying stock-related data through a server-side rendered interface. Uses Spring Data JPA and MySQL for persistent data management, with validation, email integration, and Spring Actuator for application monitoring and management.',
+      tags: ['Java', 'Spring Boot', 'Spring MVC', 'Thymeleaf', 'Spring Data JPA', 'MySQL', 'Spring Mail', 'Hibernate', 'Maven', 'Lombok', 'REST API', 'Bean Validation', 'Spring Actuator'],
+      tagType: 'spring',
+    },
+    {
+      title: 'My Awesome Card — Personalized Greeting Card E-Commerce Platform',
+      description: 'Django-based e-commerce and blogging platform where users can discover, customize, and purchase personalized greeting cards. Includes authentication, product browsing, cart and checkout, image and text customization, search, reviews, a blog, and an admin dashboard for managing products, orders, users, and posts.',
+      tags: ['Python', 'Django', 'Django ORM', 'SQLite', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Pillow', 'Gunicorn', 'Django Admin', 'Authentication', 'E-Commerce', 'Blog CMS'],
+      tagType: 'django',
     },
   ],
 }

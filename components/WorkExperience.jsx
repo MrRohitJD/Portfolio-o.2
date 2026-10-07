@@ -7,6 +7,10 @@ const experienceData = [
     role: 'Software Engineer Intern',
     company: 'MHTECHIN',
     dateRange: '07-2023 to 10-2023',
+    highlights: [
+      'Completed a Software Engineer Internship program, gaining exposure to real-world software engineering practices.',
+      'Developed an understanding of software development workflows, programming concepts, and engineering problem-solving.',
+    ],
     certificateUrl: 'https://unstop.com/certificate-preview/38e2873a-4e26-4cb9-a048-2999299b8927',
   },
 ]
@@ -38,6 +42,15 @@ export default function WorkExperience() {
                   {item.dateRange}
                 </span>
               </div>
+
+              <ul className="mt-4 space-y-2 text-gray-300 text-base">
+                {item.highlights.map((highlight) => (
+                  <li key={highlight} className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400"></span>
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
 
               <div className="experience-certificate mt-4">
                 <a
