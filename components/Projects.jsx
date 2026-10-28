@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Star, Clock, Folder, Github } from 'lucide-react'
+import { Star, Clock, Folder, Github, ArrowUpRight } from 'lucide-react'
 
 const projectsData = {
   featured: [
@@ -16,6 +16,7 @@ const projectsData = {
       description: 'Full-stack AI Gmail assistant that connects to Gmail through Google OAuth and the Gmail API. Enables users to retrieve, classify, search, and manage emails through an AI chatbot, including composing and sending emails to specific recipients using natural-language commands.',
       tags: ['React', 'FastAPI', 'Python', 'Gmail API', 'Google OAuth', 'PostgreSQL', 'NLP', 'AI Agents', 'Generative AI'],
       tagType: 'ai-agent',
+      liveUrl: 'https://mail-assistant.rohit-jadhav.dev/',
     },
     {
       title: '(SpeakFrame) Audio & Embeddings Toolkit (RAG base)',
@@ -35,7 +36,7 @@ const projectsData = {
   past: [
     {
       title: 'ML Credit Score',
-      description: 'Built an end-to-end Credit Risk Prediction Web App using Kaggle’s dataset, achieving 86.41 ROC-AUC (close to top leaderboard score of 86.64).Trained models (Logistic Regression, XGBoost, Balanced Random Forest) with strong preprocessing and class imbalance handling. Developed a Django-based app with real-time predictions, dashboard insights, and SQLite integration for a complete ML deployment.',
+      description: 'Built an end-to-end Credit Risk Prediction Web App using Kaggle\'s dataset, achieving 86.41 ROC-AUC (close to top leaderboard score of 86.64).Trained models (Logistic Regression, XGBoost, Balanced Random Forest) with strong preprocessing and class imbalance handling. Developed a Django-based app with real-time predictions, dashboard insights, and SQLite integration for a complete ML deployment.',
       tags: ['Scikit-learn', 'XGBoost', 'Optuna',  'imbalanced-learn'],
       tagType: 'ML pipeline',
       githubUrl: 'https://github.com/MrRohitJD/CreditScore-ML-project'
@@ -136,6 +137,19 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${project.title} live demo (opens in a new tab)`}
+                  className="mt-4 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-gray-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Live Demo
+                  <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+                </a>
+              )}
 
               {project.githubUrl && (
                 <a
