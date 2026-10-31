@@ -6,17 +6,17 @@ import { Star, Clock, Folder, Github, ArrowUpRight } from 'lucide-react'
 const projectsData = {
   featured: [
     {
-      title: 'AI-Powered CCTV Surveillance & Intrusion Detection',
-      description: 'Real-time AI surveillance system for person and vehicle detection, multi-object tracking, and intrusion-zone monitoring. Built scalable FastAPI services with YOLO, ByteTrack, and Re-ID for consistent object tracking and PostgreSQL for detection data management.',
-      tags: ['YOLO', 'ByteTrack', 'Re-ID', 'FastAPI', 'Python', 'PostgreSQL', 'OpenCV', 'Computer Vision'],
-      tagType: 'computer-vision',
-    },
-    {
       title: 'AI-Powered Gmail Assistant & Email Automation',
       description: 'Full-stack AI Gmail assistant that connects to Gmail through Google OAuth and the Gmail API. Enables users to retrieve, classify, search, and manage emails through an AI chatbot, including composing and sending emails to specific recipients using natural-language commands.',
       tags: ['React', 'FastAPI', 'Python', 'Gmail API', 'Google OAuth', 'PostgreSQL', 'NLP', 'AI Agents', 'Generative AI'],
       tagType: 'ai-agent',
       liveUrl: 'https://mail-assistant.rohit-jadhav.dev/',
+    },
+    {
+      title: 'AI-Powered CCTV Surveillance & Intrusion Detection',
+      description: 'Real-time AI surveillance system for person and vehicle detection, multi-object tracking, and intrusion-zone monitoring. Built scalable FastAPI services with YOLO, ByteTrack, and Re-ID for consistent object tracking and PostgreSQL for detection data management.',
+      tags: ['YOLO', 'ByteTrack', 'Re-ID', 'FastAPI', 'Python', 'PostgreSQL', 'OpenCV', 'Computer Vision'],
+      tagType: 'computer-vision',
     },
     {
       title: '(SpeakFrame) Audio & Embeddings Toolkit (RAG base)',

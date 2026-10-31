@@ -25,6 +25,7 @@ import {
 
 const skillsData = {
   software: [
+    { icon: Code2, name: 'React' },
     { icon: FlaskConical, name: 'Data science' },
     { icon: LineChart, name: 'Data analyst' },
     { icon: Cpu, name: 'Scikit-learn' },

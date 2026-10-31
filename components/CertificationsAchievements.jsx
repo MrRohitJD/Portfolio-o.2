@@ -11,6 +11,11 @@ const certifications = [
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/3J6IY7TBN4CZ',
     imageUrl: '/images/Coursera_ibm.jpg',
   },
+  {
+    title: 'Java Full Stack Development Certification',
+    issuer: 'JSpiders Bengaluru',
+    verifyUrl: 'https://drive.google.com/file/d/1tVlDWzPW6ENFsGBKyn6rgfL23-tNKrPL/view',
+  },
 ]
 
 const achievements = [
@@ -41,14 +46,20 @@ export default function CertificationsAchievements() {
                 </div>
               </div>
 
-              <div className="mt-4 space-y-1.5 text-sm text-gray-300">
-                <p>
-                  <span className="text-gray-400">Issued:</span> {item.issued}
-                </p>
-                <p>
-                  <span className="text-gray-400">Credential ID:</span> {item.credentialId}
-                </p>
-              </div>
+              {(item.issued || item.credentialId) && (
+                <div className="mt-4 space-y-1.5 text-sm text-gray-300">
+                  {item.issued && (
+                    <p>
+                      <span className="text-gray-400">Issued:</span> {item.issued}
+                    </p>
+                  )}
+                  {item.credentialId && (
+                    <p>
+                      <span className="text-gray-400">Credential ID:</span> {item.credentialId}
+                    </p>
+                  )}
+                </div>
+              )}
 
               <div className="experience-certificate mt-4">
                 <a
