@@ -8,9 +8,10 @@ const projectsData = {
     {
       title: 'AI-Powered Gmail Assistant & Email Automation',
       description: 'Full-stack AI Gmail assistant that connects to Gmail through Google OAuth and the Gmail API. Enables users to retrieve, classify, search, and manage emails through an AI chatbot, including composing and sending emails to specific recipients using natural-language commands.',
-      tags: ['React', 'FastAPI', 'Python', 'Gmail API', 'Google OAuth', 'PostgreSQL', 'NLP', 'AI Agents', 'Generative AI'],
+      tags: ['FastAPI', 'Python', 'Gmail API', 'Google OAuth', 'PostgreSQL', 'NLP', 'AI Agents', 'Generative AI'],
       tagType: 'ai-agent',
       liveUrl: 'https://mail-assistant.rohit-jadhav.dev/',
+      demoVideoUrl: 'https://youtu.be/HHkMNiR05Kg?si=q7VedGJGyoUaI4M6',
     },
     {
       title: 'AI-Powered CCTV Surveillance & Intrusion Detection',
@@ -138,29 +139,46 @@ export default function Projects() {
                 ))}
               </div>
 
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Open ${project.title} live demo (opens in a new tab)`}
-                  className="mt-4 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-gray-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-                >
-                  Live Demo
-                  <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-                </a>
-              )}
+              {(project.liveUrl || project.demoVideoUrl || project.githubUrl) && (
+                <div className="mt-4 flex flex-wrap items-center gap-4">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${project.title} live (opens in a new tab)`}
+                      className="inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-gray-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                    >
+                      Live
+                      <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+                    </a>
+                  )}
 
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gray-200 hover:text-white"
-                >
-                  <Github className="w-4 h-4" />
-                  GitHub Repo
-                </a>
+                  {project.demoVideoUrl && (
+                    <a
+                      href={project.demoVideoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Watch ${project.title} demo video (opens in a new tab)`}
+                      className="inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-gray-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                    >
+                      Demo Video
+                      <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+                    </a>
+                  )}
+
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-gray-200 hover:text-white"
+                    >
+                      <Github className="w-4 h-4" />
+                      GitHub Repo
+                    </a>
+                  )}
+                </div>
               )}
             </div>
           ))}
