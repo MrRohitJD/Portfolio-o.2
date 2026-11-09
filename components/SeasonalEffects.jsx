@@ -35,7 +35,18 @@ export default function SeasonalEffects() {
               '--leaf-rotation': leaf.rotation,
               '--leaf-color': leaf.color,
             }}
-          />
+          >
+            <svg viewBox="0 0 100 100" focusable="false">
+              <path
+                className="leaf-shape"
+                d="M8 82C13 43 42 12 92 8C87 55 58 86 8 82Z"
+              />
+              <path
+                className="leaf-vein"
+                d="M12 80C35 61 56 38 86 12M35 61L28 40M53 44L48 24M68 30L68 17"
+              />
+            </svg>
+          </span>
         ))}
       </div>
     </div>

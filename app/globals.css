@@ -39,13 +39,27 @@
     top: -28px;
     left: var(--leaf-left);
     width: var(--leaf-size);
-    height: calc(var(--leaf-size) * 0.72);
-    border-radius: 100% 0 100% 0;
-    background: var(--leaf-color);
+    height: var(--leaf-size);
     opacity: 0.7;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
-    transform: rotate(45deg);
     animation: leafFall var(--leaf-duration) ease-in var(--leaf-delay) infinite;
+  }
+
+  .falling-leaf svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .leaf-shape {
+    fill: var(--leaf-color);
+  }
+
+  .leaf-vein {
+    fill: none;
+    stroke: rgba(90, 25, 10, 0.55);
+    stroke-linecap: round;
+    stroke-width: 2.5;
   }
 
   .btn {
