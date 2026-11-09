@@ -1,6 +1,15 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Snowfall from 'react-snowfall'
+
+const snowflakeSvg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M16 2v28M3.9 9l24.2 14M3.9 23L28.1 9M10 5.5l6 3.5 6-3.5M10 26.5l6-3.5 6 3.5M5.5 16l3.5-6M5.5 16l3.5 6M26.5 16l-3.5-6M26.5 16l-3.5 6" />
+    </g>
+  </svg>
+`
 
 const leaves = Array.from({ length: 18 }, (_, index) => ({
   left: `${(index * 53 + 8) % 104 - 2}%`,
@@ -13,12 +22,33 @@ const leaves = Array.from({ length: 18 }, (_, index) => ({
 }))
 
 export default function SeasonalEffects() {
+  const [snowflakeImages, setSnowflakeImages] = useState([])
+
+  useEffect(() => {
+    let mounted = true
+    const snowflakeImage = new Image()
+
+    snowflakeImage.onload = () => {
+      if (mounted) setSnowflakeImages([snowflakeImage])
+    }
+    snowflakeImage.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(snowflakeSvg)}`
+
+    return () => {
+      mounted = false
+    }
+  }, [])
+
   return (
     <div className="seasonal-effects" aria-hidden="true">
       <Snowfall
         color="#ffffff"
-        snowflakeCount={90}
-        style={{ opacity: 0.6 }}
+        images={snowflakeImages.length ? snowflakeImages : undefined}
+        radius={[4, 8]}
+        speed={[0.7, 1.8]}
+        wind={[-0.7, 0.8]}
+        rotationSpeed={[-2, 2]}
+        snowflakeCount={70}
+        style={{ opacity: 0.75 }}
       />
 
       <div className="leaves-layer">
