@@ -20,6 +20,34 @@
 }
 
 @layer components {
+  .seasonal-effects {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .leaves-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .falling-leaf {
+    position: absolute;
+    top: -28px;
+    left: var(--leaf-left);
+    width: var(--leaf-size);
+    height: calc(var(--leaf-size) * 0.72);
+    border-radius: 100% 0 100% 0;
+    background: var(--leaf-color);
+    opacity: 0.7;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
+    transform: rotate(45deg);
+    animation: leafFall var(--leaf-duration) ease-in var(--leaf-delay) infinite;
+  }
+
   .btn {
     @apply inline-flex items-center gap-2.5 px-6 py-3 rounded-lg text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.28),0_10px_24px_rgba(255,255,255,0.08)];
   }
@@ -137,6 +165,32 @@
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes leafFall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -6vh, 0) rotate(var(--leaf-rotation));
+  }
+
+  10% {
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate3d(var(--leaf-drift), 50vh, 0) rotate(calc(var(--leaf-rotation) + 180deg));
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 108vh, 0) rotate(calc(var(--leaf-rotation) + 360deg));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seasonal-effects {
+    display: none;
   }
 }
 
